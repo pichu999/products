@@ -1,53 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@import "reset.css";
 
 :root {
 	--primary-100: #f5fee7;
@@ -130,9 +83,43 @@ a {
 	font-weight: 700;
 }
 
-.container {
-	width: 1296px;
+@media (max-width: 767px){
+	.h3-md{
+		font-size: 28px;
+	}
+	.h4-md{
+		font-size: 24px;
+	}
+	.h5-md{
+		font-size: 20px;
+	}
+	.h6-md{
+		font-size: 16px;
+	}
+	
+}
+
+@media (max-width: 576px){
+	.h3-sm{
+		font-size: 28px;
+	}
+	.h4-sm{
+		font-size: 24px;
+	}
+	.h5-sm{
+		font-size: 20px;
+	}
+	.h6-sm{
+		font-size: 16px;
+	}
+	
+}
+
+.container.container {
+	max-width: 1320px;
 	margin: 0 auto;
+	padding-right: 12px;
+	padding-left: 12px;
 }
 
 .row {
@@ -201,8 +188,52 @@ a {
 	width: 100%;
 }
 
+@media (max-width: 767px){
+	.row{
+		margin: 0 -6px;
+	}
+	.col-md-1{
+		padding: 0 6px;
+		width: calc(100% / 4 );
+	}
+	.col-md-2{
+		padding: 0 6px;
+		width: calc(100% / 4 * 2);
+	}
+	.col-md-3{
+		padding: 0 6px;
+		width: calc(100% / 4 * 3);
+	}
+	.col-md-4{
+		padding: 0 6px;
+		width: 100%;
+	}
+}
+
 .d-flex {
 	display: flex;
+}
+
+.d-none{
+	display: none;
+}
+
+@media (max-width: 767px){
+	.d-md-block{
+		display: block;
+	}
+	.d-md-none{
+		display: none;
+	}
+}
+
+@media (max-width: 576px){
+	.d-sm-block{
+		display: block;
+	}
+	.d-sm-none{
+		display: none;
+	}
 }
 
 .jcsb {
@@ -273,6 +304,30 @@ a {
 	padding: 64px 0;
 }
 
+@media (max-width: 767px){
+	.py-md-16{
+		padding: 16px 0;
+	}
+	.py-md-32{
+		padding: 32px 0;
+	}
+	.pb-md-32{
+		padding-bottom: 32px;
+	}
+}
+
+@media (max-width: 576px){
+	.px-sm-12{
+		padding: 0 12px;
+	}
+	.py-sm-12{
+		padding: 12px 0;
+	}
+	.py-sm-32{
+		padding: 32px 0;
+	}
+}
+
 .mr-8 {
 	margin-right: 8px;
 }
@@ -318,11 +373,47 @@ a {
 }
 
 .mb-40 {
-	margin-bottom: 40px;
+	margin-bottom: 40px; 
 }
 
 .mb-48 {
 	margin-bottom: 48px;
+}
+
+@media (max-width: 767px){
+	.mb-md-0{
+		margin-bottom: 0;
+	}
+	.mb-md-8{
+		margin-bottom: 8px;
+	}
+	.mb-md-12{
+		margin-bottom: 12px;
+	}
+	.mb-md-16{
+		margin-bottom: 16px;
+	}
+	.mb-md-24{
+		margin-bottom: 24px;
+	}
+	.mb-md-32{
+		margin-bottom: 32px;
+	}
+}
+
+@media (max-width: 576px){
+	.mr-sm-0{
+		margin-right: 0;
+	}
+	.mr-sm-16{
+		margin-right: 16px;
+	}
+	.mb-sm-4{
+		margin-bottom: 4px;
+	}
+	.mb-sm-8{
+		margin-bottom: 8px;
+	}
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -335,6 +426,15 @@ a {
 .breadcrumb-item {
 	display: flex;
 	font-weight: 500;
+}
+
+@media (max-width: 767px){
+	.breadcrumb-item + .breadcrumb-item::before{
+		padding: 0 8px;
+	}
+	.breadcrumb-item{
+		font-size: 14px;
+	}
 }
 
 .breadcrumb-link{
@@ -350,6 +450,12 @@ a {
 	cursor: pointer;
 	border: none;
 	background-color: transparent;
+}
+
+@media (max-width: 576px){
+	.btn{
+		padding: 8px 16px;
+	}
 }
 
 .btn-dark {
