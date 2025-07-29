@@ -234,6 +234,9 @@ a {
 	.d-sm-none{
 		display: none;
 	}
+	.d-sm-flex{
+		display: flex;
+	}
 }
 
 .jcsb {
@@ -328,6 +331,10 @@ a {
 @media (max-width: 767px){
 	.p-md-24{
 		padding: 24px;
+	}
+	.py-md-0{
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 	.py-md-16{
 		padding: 16px 0;
@@ -462,11 +469,22 @@ a {
 	}
 	.breadcrumb-item{
 		font-size: 14px;
+		padding-top: 1.5px;
+		padding-bottom: 1.5px;
 	}
 }
 
-.breadcrumb-link{
+.breadcrumb-link {
 	color: var(--neutral-600);
+}
+
+.bi-24 {
+	font-size: 24px;
+	line-height: 1;
+}
+
+.bi-20 {
+	font-size: 20px;
 }
 
 .btn {
@@ -480,9 +498,17 @@ a {
 	background-color: transparent;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: none; /* 完全忽略滑鼠事件 */
+}
+
 @media (max-width: 576px){
 	.btn{
 		padding: 8px 16px;
+	}
+	.btn-sm{
+		padding: 12px;
 	}
 }
 
